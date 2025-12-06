@@ -13,5 +13,5 @@ app.post('/add-user',(req,res)=>{
 
 });
 app.listen(7000,()=>{
-    console.log("Server running at port 7000");
+    console.log("Server running at port 7000");
 })
