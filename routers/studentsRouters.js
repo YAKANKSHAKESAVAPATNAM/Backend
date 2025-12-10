@@ -1,4 +1,4 @@
-import express from "express";
+import express from 'express';
 import { getStudents, addStudents } from "../controllers/StudentsController.js";
 const router = express.Router();
 router.get('/get-students', getStudents);
