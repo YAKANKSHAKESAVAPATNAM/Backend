@@ -5,12 +5,22 @@
 // router.post('/add-students', addStudents);
 // export default router;  
 
+import express from "express";
+import {
+  getStudentByRoll,
+  addStudents,
+  getStudentsFilter
+} from "../controllers/studentsController.js";
 
-import express from 'express';
 const router = express.Router();
-import {getStudentsDetails,addStudents} from '../controllers/studentsController.js';
 
-router.get('/get-students', getStudentsDetails);
-router.post('/add-students', addStudents);
+// GET student by roll number (params)
+router.get("/students/:stdRoll", getStudentByRoll);
+
+// GET students using query params (?stdRoll=102&stdPhone=9876543210)
+router.get("/students", getStudentsFilter);
+
+// POST add a new student
+router.post("/students", addStudents);
 
 export default router;
